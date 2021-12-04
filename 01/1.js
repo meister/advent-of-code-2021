@@ -28,8 +28,6 @@ async function main(input) {
 	return increases;
 }
 
-// Correct *should* be 1390?
-
 runner(main);
 
 module.exports = {

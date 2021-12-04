@@ -10,9 +10,11 @@ async function getInputFile(input) {
 	return contents;
 }
 
-async function runner(fn) {
+const toNumber = (line) => Number(line);
+
+async function runner(fn, parser = toNumber) {
 	const file = await getInputFile('input');
-	const values = file.split('\n').map(value => Number(value));
+	const values = file.trim().split('\n').map(parser);
 
 	if ((process.mainModule && process.mainModule.filename) && require.main.filename === process.mainModule.filename) {
 		const result = await fn(values);
@@ -29,4 +31,5 @@ function debug(...args) {
 module.exports = {
 	runner,
 	debug,
+	toNumber,
 };
