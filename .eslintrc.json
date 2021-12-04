@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": "pipedrive/es8",
+  "rules": {
+    "no-console": "off",
+    "no-negated-condition": "off"
+  },
+  "env": {
+    "jest": true,
+    "node": true
+  }
+}
