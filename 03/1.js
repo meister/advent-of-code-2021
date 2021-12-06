@@ -21,7 +21,7 @@ async function main(input) {
 	let gamma = 0;
 
 	for (let i = 0; i < counts.length; i++) {
-		if (counts[i] > (max - counts[i])) {
+		if (counts[i] >= (max - counts[i])) {
 			gamma += 2 ** (counts.length - 1 - i);
 		}
 	}
@@ -32,11 +32,15 @@ async function main(input) {
 
 	debug('epsilon', epsilon);
 
-	return gamma * epsilon;
+	return {
+		gamma,
+		epsilon,
+		result: gamma * epsilon
+	};
 }
 
 runner(main, row => row);
 
 module.exports = {
-	main,
+	main
 };

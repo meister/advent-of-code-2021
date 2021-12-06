@@ -3,7 +3,8 @@
   "extends": "pipedrive/es8",
   "rules": {
     "no-console": "off",
-    "no-negated-condition": "off"
+    "no-negated-condition": "off",
+    "comma-dangle": ["error", "never"]
   },
   "env": {
     "jest": true,

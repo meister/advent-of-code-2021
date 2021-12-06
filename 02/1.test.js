@@ -8,7 +8,7 @@ describe('part 1', () => {
 			[ 'forward', 8 ],
 			[ 'up', 3 ],
 			[ 'down', 8 ],
-			[ 'forward', 2 ],
+			[ 'forward', 2 ]
 		];
 
 		const result = await main(values);
@@ -16,7 +16,7 @@ describe('part 1', () => {
 		expect(result).toEqual({
 			h: 15,
 			d: 10,
-			result: 150,
+			result: 150
 		});
 	});
 });

@@ -3,7 +3,7 @@ const { runner, debug } = require('../utils');
 const actions = {
 	forward: ({ h, d }, distance) => ({ h: h + distance, d }),
 	down: ({ h, d }, distance) => ({ h, d: d + distance }),
-	up: ({ h, d }, distance) => ({ h, d: d - distance }),
+	up: ({ h, d }, distance) => ({ h, d: d - distance })
 };
 
 function move(pos, [a, distance]) {
@@ -25,5 +25,5 @@ runner(main, (l) => l
 	.map((val, i) => i === 1 ? Number(val) : val));
 
 module.exports = {
-	main,
+	main
 };

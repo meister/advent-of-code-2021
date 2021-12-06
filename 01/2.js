@@ -31,5 +31,5 @@ async function main(input) {
 runner(main);
 
 module.exports = {
-	main,
+	main
 };

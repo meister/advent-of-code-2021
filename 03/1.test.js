@@ -14,11 +14,34 @@ describe('part 1', () => {
 			'10000',
 			'11001',
 			'00010',
-			'01010',
+			'01010'
 		];
 
 		const result = await main(values);
 
-		expect(result).toEqual(198);
+		expect(result).toEqual({
+			gamma: 22,
+			epsilon: 9,
+			result: 198
+		});
+	});
+
+	test('even count test', async () => {
+		const values = [
+			'00100',
+			'11010',
+			'10011',
+			'11000',
+			'00111',
+			'11000'
+		];
+
+		const result = await main(values);
+
+		expect(result).toEqual({
+			gamma: 0b11010,
+			epsilon: 0b00101,
+			result: 130
+		});
 	});
 });

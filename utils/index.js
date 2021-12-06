@@ -31,5 +31,5 @@ function debug(...args) {
 module.exports = {
 	runner,
 	debug,
-	toNumber,
+	toNumber
 };

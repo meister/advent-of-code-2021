@@ -12,7 +12,7 @@ describe('part 2', () => {
 			240,
 			269,
 			260,
-			263,
+			263
 		];
 
 		const result = await main(values);
